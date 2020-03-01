@@ -5,8 +5,9 @@ window.onscroll = scrollBarUpdate;
 function scrollBarUpdate(){
     const spot = window.pageYOffset;
     const height = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) - window.innerHeight;
+    // const percentScrolled = Math.round(((spot / height) * 100));
     const percentScrolled = ((spot / height) * 100);
-    scrollProgressBar.style.width = (percentScrolled + "%")
+    scrollProgressBar.style.width = (percentScrolled + "%");
 }
 
 

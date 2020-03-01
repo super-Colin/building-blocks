@@ -1,5 +1,6 @@
 :root{
     --scroll-progress-bar__height: 10px;
+    --header-height: 150px;
 }
 
 *{
@@ -7,13 +8,13 @@
     margin: 0;
 }
 body{
-    padding-top:150px;
+    margin-top:var(--header-height);
 }
 
 header{
     width: 100%;
     background-color: orangered;
-    height: 150px;
+    height: var(--header-height);
     position: fixed;
     top: 0;
 }
@@ -27,9 +28,11 @@ header{
     left: 0;
 }
 .scroll-progress-bar{
-    width: 150px;
+    width: 0;
     height: var(--scroll-progress-bar__height);
-    background-color: orange
+    background-color: orange;
+    border-radius: 0 0 var(--scroll-progress-bar__height) var(--scroll-progress-bar__height);
+    /* border-radius: 5px; */
 }
 
 .filler{
