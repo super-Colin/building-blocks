@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 
 :root{
     --box-size: 3rem;
@@ -7,11 +13,6 @@
     --transition-time: 1s;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 
 /* -- REMOVABLE -- */
