@@ -27,10 +27,9 @@
 .bookshelfTabs-icon{
     height: 100%;
     width: 100%;
-    padding: var(--line-thickness);
+    padding: var(--inner-padding);
 
     position: relative;
-
 }
 
 .bookshelf-top,
