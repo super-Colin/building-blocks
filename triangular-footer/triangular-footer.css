@@ -1,12 +1,14 @@
 :root{
-    --above-top: 2rem;
+    /* --above-top: 2rem; */
+    --above-top: 2vw;
     --tilt-angle: 33deg;
     --top-arrow-width: 10vw;
-    --bottom-triangles: 9rem;
+    --bottom-triangles: 15vw;
 
     --main-color: #ea3;
     --lighter-color: #fc5;
-    --color-mainBG: #EEE;
+    /* --color-mainBG: #EEE; */
+    --color-mainBG: #FFF;
 
     --layout-main-spacing: 1.5rem;
 }
@@ -61,6 +63,7 @@
 }
 .right-triangle,
 .left-triangle{
+    transition: transform 1s;
     position: absolute;
     /* top: calc(var(--above-top) * -1); */
     top: 0;
@@ -71,12 +74,55 @@
 .left-triangle{
     transform-origin: left top;
     transform: rotate(var(--tilt-angle));
-    background-color: darkgrey;
-    right: -50rem;
+    background-color: #444;
+    right: -30rem;
 }
 .right-triangle{
     transform-origin: right top;
     transform: rotate(calc(var(--tilt-angle) * -1));
-    background-color: lightgrey;
-    left: -50rem;
+    background-color: #777;
+    left: -30rem;
+}
+.right-triangle-content{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0;
+    padding: var(--layout-main-spacing);
+    /* top: var(--bottom-triangles); */
+    /* bottom: 0; */
+    /* bottom: calc(var(--bottom-triangles) / 2); */
+    bottom: calc(var(--above-top) * 2);
+}
+
+@media(max-width: 800px){
+    :root{
+        --above-top: 10vw;
+        --bottom-triangles: 33vw;
+    }
+
+    .triangular-footer{
+        background-color: unset;
+        background-image: unset;
+    }
+    .top-triangle{
+        display: none;
+    }
+
+    .expanded-triangle-content{
+        display: none;
+    }
+
+    .right-triangle-content {
+    bottom: var(--above-top);
+    }
+
+}
+
+@media(max-width: 400px) {
+    :root{
+        --tilt-angle: 13deg;
+    }
 }
