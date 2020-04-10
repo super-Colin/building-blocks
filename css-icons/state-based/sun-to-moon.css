@@ -69,10 +69,14 @@
     width: 4px;
     background-color: white;
     border-radius: 2px;
+
+    opacity: 0.7;
 }
 .moonToSun-moon-star1{
     top: 6%;
     left: 79%;
+
+    opacity: 0.6;
 }
 .moonToSun-moon-star2{
     top: 10%;
@@ -81,10 +85,14 @@
 .moonToSun-moon-star3{
     top: 42%;
     left: 12%;
+
+    opacity: 0.4;
 }
 .moonToSun-moon-star4{
     top: 69%;
     left: 82%;
+    
+    opacity: 0.5;
 }
 .moonToSun-moon-star5{
     top: 82%;
